@@ -22,7 +22,6 @@ import { DiscordModule } from '@common/discord/discord.module';
 import { LoggerInterceptor } from '@common/interceptor';
 import { AuthModule } from './auth/auth.module';
 import { UsersModule } from './users/users.module';
-import { ExampleResourceModule } from './example-resource/example-resource.module';
 import { TelegramBotModule } from './telegram-bot/telegram-bot.module';
 import { RateLimiterModule } from './rate-limiter.module';
 import { NotificationsModule } from './notifications/notifications.module';
@@ -59,7 +58,6 @@ import { NotificationsModule } from './notifications/notifications.module';
     RepositoryModule,
     UsersModule,
     AuthModule,
-    ExampleResourceModule,
     TelegramBotModule,
     DiscordModule,
     NotificationsModule,
