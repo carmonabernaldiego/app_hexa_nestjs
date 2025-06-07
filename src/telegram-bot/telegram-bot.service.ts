@@ -12,7 +12,7 @@ export class TelegramBotService {
   @Start()
   async startCommand(ctx: Context) {
     const welcomeMessage =
-      `Bienvenido al Servicio de Ayuda de AutoMaker 🚀\n\n` +
+      `Bienvenido al Servicio de Ayuda 🚀\n\n` +
       `Elige una opción del menú o escribe una pregunta:\n` +
       `1. 📊 Servicios de análisis de datos\n` +
       `2. 📞 Soporte al cliente\n` +
@@ -52,7 +52,7 @@ export class TelegramBotService {
       `1. 📈 Análisis de patrones de consumo de filamento\n` +
       `2. ⚡ Monitoreo de consumo energético\n` +
       `3. 🕒 Control de durabilidad y reemplazo de sensores\n` +
-      `4. 📱 Integración de datos con OctoPrint y la app de AutoMaker\n\n` +
+      `4. 📱 Integración de datos con OctoPrint y la app\n\n` +
       `Escribe el número del servicio para más detalles.`;
     await ctx.reply(servicesMessage);
   }
@@ -60,7 +60,7 @@ export class TelegramBotService {
   @Hears(/^cliente$/i)
   async hearsClientSupport(ctx: Context) {
     await ctx.reply(
-      'Puedes contactar a nuestro equipo de soporte al cliente llamando al 9619798424 o escribiendo a soporte@automaker.com.',
+      'Puedes contactar a nuestro equipo de soporte al cliente llamando al 9619798424 o escribiendo a soporte@ejemplo.com.',
     );
   }
 
@@ -80,14 +80,14 @@ export class TelegramBotService {
   @Hears(/^¿cómo se instala el sensor\??|1$/i)
   async hearsSensorInstallation(ctx: Context) {
     await ctx.reply(
-      'La instalación es sencilla. Conecta el sensor a tu impresora 3D y sincronízalo con OctoPrint. Encuentra la guía completa en www.automaker.com/instalacion.',
+      'La instalación es sencilla. Conecta el sensor a tu impresora 3D y sincronízalo con OctoPrint. Encuentra la guía completa en www.ejemplo.com/instalacion.',
     );
   }
 
   @Hears(/^¿es compatible el sensor con OctoPrint\??|2$/i)
   async hearsOctoPrintCompatibility(ctx: Context) {
     await ctx.reply(
-      'Sí, el sensor de AutoMaker es totalmente compatible con OctoPrint para que puedas monitorear y analizar datos directamente desde nuestra app.',
+      'Sí, el sensor de Ejemplo es totalmente compatible con OctoPrint para que puedas monitorear y analizar datos directamente desde nuestra app.',
     );
   }
 
@@ -101,14 +101,14 @@ export class TelegramBotService {
   @Hears(/^¿dónde se pueden ver los informes de consumo\??|4$/i)
   async hearsConsumptionReports(ctx: Context) {
     await ctx.reply(
-      'Los informes de consumo se pueden ver en la app de AutoMaker, con gráficos detallados para cada aspecto de tu impresora 3D.',
+      'Los informes de consumo se pueden ver en la app, con gráficos detallados para cada aspecto de tu impresora 3D.',
     );
   }
 
   @Hears(/^información$/i)
   async hearsInformation(ctx: Context) {
     await ctx.reply(
-      'AutoMaker ofrece herramientas de monitoreo avanzadas para impresoras 3D, optimizadas para fábricas y usuarios de OctoPrint, proporcionando insights de consumo y mantenimiento.',
+      'Ofrece herramientas de monitoreo avanzadas para impresoras 3D, optimizadas para fábricas y usuarios de OctoPrint, proporcionando insights de consumo y mantenimiento.',
     );
   }
 

@@ -39,5 +39,3 @@ lerna-debug.log*
 .env.example.prod
 ormconfig.json
 /entities
-
-automaker-key.pem

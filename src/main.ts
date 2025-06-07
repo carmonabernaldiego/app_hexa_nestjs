@@ -18,8 +18,8 @@ async function bootstrap() {
 
   // TODO: condicionar el Swagger para qa y dev unicamente
   const options = new DocumentBuilder()
-    .setTitle('API Accounts AutoMaker')
-    .setDescription('API Accounts AutoMaker')
+    .setTitle('API')
+    .setDescription('API')
     .setVersion('1.0')
     .addTag('MicroService')
     .addBearerAuth()
@@ -36,10 +36,7 @@ async function bootstrap() {
     .enableCors();
 
   await app.listen(process.env.PORT || 3000, () => {
-    Logger.log(
-      `Listening on port: ${process.env.PORT || 3000}`,
-      'Accounts AutoMaker',
-    );
+    Logger.log(`Listening on port: ${process.env.PORT || 3000}`, 'Accounts');
   });
 }
 
