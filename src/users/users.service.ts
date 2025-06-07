@@ -28,7 +28,7 @@ export class UsersService {
     createUserDto.password = await hashPassword(createUserDto.password);
     return await this.userRepository.create({
       ...createUserDto,
-      isTwoFactorEnable: true,
+      isTwoFactorEnable: false,
     });
   }
 
